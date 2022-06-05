@@ -1,29 +1,40 @@
 # Go App on Ubuntu Server
-A simple step to host golang app on ubuntu server.
+A simple step to host golang app on ubuntu server. 
+NOTE: Replace the following
+* ```example.com``` to your actual domain
+* ```appdir``` to your project directory
+* ```appname``` to your go app name
 
-## 1. DNS and ReInstallations
+## 1. DNS and prerequisites
 ###### Create DNS A record for the domain/subdomain
-Point example.com to server IP address
-Install nginx and certbot
+* Point your ```example.com``` to your server IP address
+
+###### Prerequisites
+* Ubutun server
+* Install nginx (webserver)
+* Install certbot (generate SSL certificate)
 
 ## 2. Project Dir and Files
 ###### Create project directory, bash executable file and .env file
+Run the following commands:
 ```
 mkdir /home/ubuntu/appdir
 cd /home/ubuntu/appdir
 nano appname.sh
 ```
-Add the following
+Add the following content to ```appname.sh``` file
 ```
 cd /home/ubuntu/appdir
 ./appname
 ```
-Make file executable
+Make ```appname.sh``` file executable
 ```
 chmod +x appname.sh
+```
+Create ```.env``` file for your app environment variables, and add content to your ```.env``` file.
+```
 nano .env
 ```
-Add content to your .env file
 
 ## 3. Create Service
 ```
