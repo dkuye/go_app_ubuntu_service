@@ -103,6 +103,7 @@ sudo systemctl restart nginx
 
 ## 5. SSL
 ###### Secure with https
+Generate SSL certificate and restart nginx
 ```
 sudo certbot --nginx -d example.com
 sudo systemctl restart nginx
